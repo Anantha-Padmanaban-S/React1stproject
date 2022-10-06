@@ -6,16 +6,160 @@ import Pricing from './PricingInfo';
 import Card from './card';
 
 function App() {
-  
+  let details = [
+    {
+      subs: "FREE",
+      price: 0,
+      benefits: [
+        {
+          type: "Single User",
+          enabled: true
+        },
+        {
+          type: "5GB Storage",
+          enabled: true
+        },
+        {
+          type: "Unlimited Public Projects",
+          enabled: true
+        },
+        {
+          type: "Community Access",
+          enabled: true
+        },
+        {
+          type: "Unlimited Private Projects",
+          enabled: false
+        },
+        {
+          type: "Dedicated Phone Support",
+          enabled: false
+        },
+
+        {
+          type: "Free Subdomain",
+          enabled: false
+        },
+        {
+          type: "Monthly Status Reports",
+          enabled: false
+        }
+      ]
+    },
+
+    {
+      subs: "PLUS",
+      price: 9,
+      benefits: [
+        {
+          type: "5 Users",
+          enabled: true
+        },
+        {
+          type: "50GB Storage",
+          enabled: true
+        },
+        {
+          type: "Unlimited Public Projects",
+          enabled: true
+        },
+        {
+          type: "Community Access",
+          enabled: true
+        },
+        {
+          type: "Unlimited Private Projects",
+          enabled: true
+        },
+        {
+          type: "Dedicated Phone Support",
+          enabled: true
+        },
+       {
+          type: "Free Subdomain",
+          enabled: true
+        },
+        {
+          type: "Monthly Status Reports",
+          enabled: false
+        }
+
+
+      ]
+
+
+    },
+
+    {
+      subs: "PRO",
+      price: 49,
+      benefits: [
+        {
+          type: "Unlimited Users",
+          enabled: true
+        },
+        {
+          type: "150GB Storage",
+          enabled: true
+        },
+        {
+          type: "Unlimited Public Projects",
+          enabled: true
+        },
+        {
+          type: "Community Access",
+          enabled: true
+        },
+        {
+          type: "Unlimited Private Projects",
+          enabled: true
+        },
+        {
+          type: "Dedicated Phone Support",
+          enabled: true
+        },
+
+        {
+          type: "Free Subdomain",
+          enabled: true
+        },
+        {
+          type: "Monthly Status Reports",
+          enabled: true
+        }
+
+
+      ]
+
+
+    }
+  ]
 
   return (
+
     <div className="container py3">
       <header>
         <Navbar></Navbar>
         <Pricing></Pricing>
       </header>
-      <main>     
-      <Card></Card>
+      <main>
+        <section className="pricing py-5">
+          <div className="container">
+            <div className="row">
+
+
+              {details.map((items) => {
+                return (
+                  <Card
+                    items={items}
+                  ></Card>
+                )
+              })
+              }
+
+            </div>
+          </div>
+        </section>
       </main>
 
     </div>
@@ -24,127 +168,8 @@ function App() {
 
 export default App;
 
- 
-// // let details = [
-//   //   {
-//   //     subs: "FREE",
-//   //     price: 0,
-//   //     benefits: [
-//   //       {
-//   //         type: "Single User"
-//   //       },
-//   //       {
-//   //         type: "5GB Storage"
-//   //       },
-//   //       {
-//   //         type: "Unlimited Public Projects"
-//   //       },
-//   //       {
-//   //         type: "Community Access"
-//   //       },
-//   //       {
-//   //         type: "Unlimited Private Projects"
-//   //       },
-//   //       {
-//   //         type: "Dedicated Phone Support"
-//   //       },
-
-//   //       {
-//   //         type: "Free Subdomain"
-//   //       },
-//   //       {
-//   //         type: "Monthly Status Reports"
-//   //       }
-//   //     ]
-//   //   },
-
-//   //   {
-//   //     subs: "PLUS",
-//   //     price: 9,
-//   //     benefits: [
-//   //       {
-//   //         type: "5 Users"
-//   //       },
-//   //       {
-//   //         type: "50GB Storage"
-//   //       },
-//   //       {
-//   //         type: "Unlimited Public Projects"
-//   //       },
-//   //       {
-//   //         type: "Community Access"
-//   //       },
-//   //       {
-//   //         type: "Unlimited Private Projects"
-//   //       },
-//   //       {
-//   //         type: "Dedicated Phone Support"
-//   //       },
-
-//   //       {
-//   //         type: "Free Subdomain"
-//   //       },
-//   //       {
-//   //         type: "Monthly Status Reports"
-//   //       }
-
-
-//   //     ]
-
-
-//   //   },
-
-//   //   {
-//   //     subs: "PRO",
-//   //     price: 49,
-//   //     benefits: [
-//   //       {
-//   //         type: "Unlimited Users"
-//   //       },
-//   //       {
-//   //         type: "150GB Storage"
-//   //       },
-//   //       {
-//   //         type: "Unlimited Public Projects"
-//   //       },
-//   //       {
-//   //         type: "Community Access"
-//   //       },
-//   //       {
-//   //         type: "Unlimited Private Projects"
-//   //       },
-//   //       {
-//   //         type: "Dedicated Phone Support"
-//   //       },
-
-//   //       {
-//   //         type: "Free Subdomain"
-//   //       },
-//   //       {
-//   //         type: "Monthly Status Reports"
-//   //       }
-
-
-//   //     ]
-
-
-//   //   }
-//   // ]
 
 
 
-// {/* <section className="pricing py-5">
-//           <div className="container">
-            
 
-//               {details.map((items) => {
-//                 return (
-//                   <Card
-//                     items={items}
-//                   ></Card>
-//                 )
-//               })
-//               }
-            
-//           </div>
-//         </section> */}
+
