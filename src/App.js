@@ -120,7 +120,7 @@ function App() {
         },
 
         {
-          type: "Free Subdomain",
+          type: "Unlimited Free Subdomain",
           enabled: true
         },
         {
